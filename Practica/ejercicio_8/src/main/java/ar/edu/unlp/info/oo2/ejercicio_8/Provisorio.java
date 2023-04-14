@@ -13,7 +13,7 @@ public class Provisorio extends Estado{
 
 	@Override
 	public void inscribir(UsuarioInscripto unUsuario) {
-		this.getExcursion().getUsuariosInscriptos().add(unUsuario);
+		super.inscribir(unUsuario);
 		if(this.getExcursion().seAlcanzoCupoMinimo()) 
 			this.getExcursion().setState(new Definitivo(this.getExcursion()));
 		

@@ -21,7 +21,7 @@ public class Definitivo extends Estado{
 
 	@Override
 	public void inscribir(UsuarioInscripto unUsuario) {
-		this.getExcursion().getUsuariosInscriptos().add(unUsuario);
+		super.inscribir(unUsuario);
 		if(this.getExcursion().seAlcanzoCupoMaximo()) 
 			this.getExcursion().setState(new ConCupoMaximo(this.getExcursion()));
 		

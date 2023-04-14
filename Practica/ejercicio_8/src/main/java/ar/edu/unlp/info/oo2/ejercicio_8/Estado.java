@@ -43,6 +43,8 @@ public abstract class Estado {
 		return informacion;
 	}
 	
-	public abstract void inscribir(UsuarioInscripto unUsuario);
+	public void inscribir(UsuarioInscripto unUsuario) {
+		this.getExcursion().getUsuariosInscriptos().add(unUsuario);
+	}
 	
 }
