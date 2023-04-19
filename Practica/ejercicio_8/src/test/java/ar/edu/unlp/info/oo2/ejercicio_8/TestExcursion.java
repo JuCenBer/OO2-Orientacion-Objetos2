@@ -38,4 +38,29 @@ public class TestExcursion {
 		assertEquals(1, excursion.getListaDeEspera().size());
 	}
 	
+	@Test
+	public void test() {
+		assertEquals("Nombre: Dos dias en kayak bajando el Parana" +
+				"\n Costo: 2000.0" +
+				"\n Fecha: 2023-01-03" +
+				"\n Punto de encuentro: Rio de La Plata" + 
+				"\n Cantidad de usuarios faltantes para alcanzar el cupo minimo: 1"
+				,excursion.obtenerInformacion());
+		
+		excursion.inscribir(usuario1);
+		assertEquals("Nombre: Dos dias en kayak bajando el Parana" +
+				"\n Costo: 2000.0" +
+				"\n Fecha: 2023-01-03" +
+				"\n Punto de encuentro: Rio de La Plata" +
+				"\n Mails de los usuarios inscriptos: [laura@gmail.com]" +
+				"\n Cantidad de usuarios faltantes para alcanzar el cupo maximo: 1"
+				,excursion.obtenerInformacion());
+
+		excursion.inscribir(usuario2);
+		assertEquals("Nombre: Dos dias en kayak bajando el Parana" +
+				"\n Costo: 2000.0" +
+				"\n Fecha: 2023-01-03" +
+				"\n Punto de encuentro: Rio de La Plata"
+				,excursion.obtenerInformacion());
+	}
 }

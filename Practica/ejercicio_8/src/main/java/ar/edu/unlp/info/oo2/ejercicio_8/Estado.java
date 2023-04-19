@@ -38,7 +38,7 @@ public abstract class Estado {
 	public String obtenerInformacion() {
 		String informacion = "Nombre: " + this.getNombre() +
 				"\n Costo: " + this.getCosto() +
-				"\n Fecha: " + this.getFecha() +
+				"\n Fecha: " + this.getFecha().toString() +
 				"\n Punto de encuentro: " + this.getPuntoDeEncuentro();
 		return informacion;
 	}
