@@ -10,8 +10,8 @@ public class Construccion extends Etapa{
 		if (this.getProyecto().precioProyecto() > 0)
 			this.getProyecto().setState(new Evaluacion(this.getProyecto()));
 		else
-			throw new RuntimeException("No puede aprobar la construccion de "
-					+ "un proyecto cuyo costo es cero.");
+			throw new RuntimeException("No se puede aprobar la construccion de "
+					+ "un proyecto cuyo costo es $0.");
 	}
 	
 	public void modificarMargenGanancia(double margen) {

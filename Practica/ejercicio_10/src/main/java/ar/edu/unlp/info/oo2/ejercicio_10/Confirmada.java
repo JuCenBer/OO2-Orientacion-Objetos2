@@ -5,5 +5,4 @@ public class Confirmada extends Etapa{
 	public Confirmada(Proyecto proyecto) {
 		super(proyecto);
 	}
-
 }

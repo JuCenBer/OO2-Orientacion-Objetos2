@@ -11,7 +11,7 @@ public class Evaluacion extends Etapa{
 	}
 	
 	public void modificarMargenGanancia(double margen) {
-		if ((0.11 < margen) & (margen < 0.15)) {
+		if ((0.11 <= margen) & (margen <= 0.15)) {
 			this.getProyecto().setMargenGanancia(margen);
 		}
 	}
